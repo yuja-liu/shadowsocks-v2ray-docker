@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  app:
+    image: shadowsocks-v2ray:latest
+    container_name: shadowsocks-v2ray
+    ports:
+      - 8080:8388
+    environment:
+      SERVER_PORT: 8388
+      METHOD: aes-256-gcm
+      PASSWORD: my-password
+    restart: always
